@@ -12,6 +12,18 @@ app.use(express.json());
 app.use(cors());
 app.use("/uploads", express.static("uploads"));
 
+app.use(
+  cors({
+    origin: "https://deploye-mern-1whq.vercel.app",
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true,
+  })
+);
+
+
+
+
+
 mongoose.connect("mongodb+srv://test:CHPq8kUbi8ioqqyQ@cluster0.og3gcxd.mongodb.net/", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
