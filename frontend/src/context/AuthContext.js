@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await fetch("https://backend-tftv.onrender.com/login", {
+      const response = await fetch("https://backend-tftv.onrender.com/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
